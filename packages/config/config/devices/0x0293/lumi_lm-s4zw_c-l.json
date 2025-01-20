@@ -1,5 +1,5 @@
 {
-	"manufacturer": "Home controls",
+	"manufacturer": "Hogar Controls",
 	"manufacturerId": "0x0293",
 	"label": "Lumi LM-S4ZW (C-L)",
 	"description": "Z-Wave Switch with 2 On/off Light Switches and 2 Up/down Blinds Switches",
@@ -9,8 +9,232 @@
 			"productId": "0x0024"
 		}
 	],
+	"metadata": {
+		"inclusion": "Touch and hold any key on the panel for more than 5 seconds. All indication lights will blinks in blue. At this point release the key, the touch panel will start inclusion process",
+		"exclusion": "Touch and hold any key on the panel for more than 5 seconds. All indication lights will blinks blue in color. At this point release the key, the touch panel will start exclusion process",
+		"reset": "1. Press the config button 5 times, Indication LED lights will blink red in color, touch panel will start local reset. \nTouch panel switch will erase network inclusion state after local reset. Please use this procedure only when the network primary controller is missing or otherwise inoperable"
+	},
 	"firmwareVersion": {
 		"min": "0.0",
 		"max": "255.255"
+	},
+	"associations": {
+		"1": {
+			"label": "Lifeline",
+			"maxNodes": 5,
+			"isLifeline": true
+		},
+		"2": {
+			"label": "HGT-01 Basic Set",
+			"description": "Basic Set",
+			"maxNodes": 5
+		},
+		"3": {
+			"label": "HGT-01 Binary Switch Set",
+			"description": "Binary Switch Set",
+			"maxNodes": 5
+		},
+		"4": {
+			"label": "HGT-02 Basic Set",
+			"description": "Basic Set",
+			"maxNodes": 5
+		},
+		"5": {
+			"label": "HGT-02 Binary Switch Set",
+			"description": "Binary Switch Set",
+			"maxNodes": 5
+		},
+		"6": {
+			"label": "HGT-03 Basic Set",
+			"description": "Basic Set",
+			"maxNodes": 5
+		},
+		"7": {
+			"label": "HGT-03 Binary Switch Set",
+			"description": "Binary Switch Set",
+			"maxNodes": 5
+		},
+		"8": {
+			"label": "HGT-04 Basic Set",
+			"description": "Basic Set",
+			"maxNodes": 5
+		},
+		"9": {
+			"label": "HGT-04 Binary Switch Set",
+			"description": "Binary Switch Set",
+			"maxNodes": 5
+		}
+	},
+	"compat": {
+		"commandClasses": {
+			"add": {
+				"0x5a": {
+					// COMMAND_CLASS_DEVICE_RESET_LOCALLY
+					"endpoints": {
+						"0": {
+							"version": 1
+						}
+					}
+				},
+				"0x8e": {
+					// COMMAND_CLASS_MULTI_CHANNEL_ASSOCIATION_V3
+					"endpoints": {
+						"0": {
+							"version": 1
+						}
+					}
+				},
+				"0x00": {
+					"endpoints": {
+						"0": {
+							"version": 1
+						}
+					}
+				},
+				"0x86": {
+					// COMMAND_CLASS_VERSION
+					"endpoints": {
+						"0": {
+							"version": 2
+						}
+					}
+				},
+				"0x7a": {
+					// COMMAND_CLASS_FIRMWARE_UPDATE_MD
+					"endpoints": {
+						"0": {
+							"version": 1
+						}
+					}
+				},
+				"0x73": {
+					//  COMMAND_CLASS_POWERLEVEL
+					"endpoints": {
+						"0": {
+							"version": 1
+						}
+					}
+				},
+				"0x72": {
+					// COMMAND_CLASS_MANUFACTURER_SPECIFIC
+					"endpoints": {
+						"0": {
+							"version": 1
+						}
+					}
+				},
+				"0x60": {
+					// COMMAND_CLASS_MULTI_CHANNEL_V2
+					"endpoints": {
+						"0": {
+							"version": 2
+						}
+					}
+				},
+				"0x20": {
+					// COMMAND_CLASS_BASIC
+					"endpoints": {
+						"0": {
+							"version": 1
+						},
+						"1": {
+							"version": 1
+						},
+						"2": {
+							"version": 1
+						},
+						"3": {
+							"version": 1
+						}
+					}
+				},
+				"0x25": {
+					// COMMAND_CLASS_SWITCH_BINARY
+					"endpoints": {
+						"0": {
+							"version": 1
+						},
+						"1": {
+							"version": 1
+						},
+						"2": {
+							"version": 1
+						},
+						"3": {
+							"version": 1
+						}
+					}
+				},
+				"0x26": {
+					// COMMAND_CLASS_SWITCH_MULTILEVEL_V1
+					"endpoints": {
+						"0": {
+							"version": 1
+						},
+						"1": {
+							"version": 1
+						},
+						"2": {
+							"version": 1
+						},
+						"3": {
+							"version": 1
+						}
+					}
+				},
+				"0x59": {
+					// COMMAND_CLASS_ASSOCIATION_GRP_INFO_V1
+					"endpoints": {
+						"0": {
+							"version": 1
+						},
+						"1": {
+							"version": 1
+						},
+						"2": {
+							"version": 1
+						},
+						"3": {
+							"version": 1
+						}
+					}
+				},
+				"0x5e": {
+					// COMMAND_CLASS_ZWAVEPLUS_INFO_V1
+					"endpoints": {
+						"0": {
+							"version": 1
+						},
+						"1": {
+							"version": 1
+						},
+						"2": {
+							"version": 1
+						},
+						"3": {
+							"version": 1
+						}
+					}
+				},
+				"0x85": {
+					// COMMAND_CLASS_ASSOCIATION_V2
+					"endpoints": {
+						"0": {
+							"version": 2
+						},
+						"1": {
+							"version": 2
+						},
+						"2": {
+							"version": 2
+						},
+						"3": {
+							"version": 2
+						}
+					}
+				}
+			}
+		}
 	}
 }
+
